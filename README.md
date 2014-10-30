@@ -56,7 +56,7 @@ ORM은 Object Relational Mapping의 약자로,<br>
 SQL을 이용하여 제어하는 것이 아니라, DB의 테이블을 PHP의 오브젝트에 직접 매핑하여 접근하는 방식입니다.<br>
 ORM에는 여러가지 구현체가 있으며, 그 중 [idiorm](https://github.com/j4mie/idiorm)을 사용하여 DB작업해보겠습니다.<br>
 <br>
-__SELECT 쿼리 사용하기__
+__SELECT 쿼리 사용하기__<br>
 for_table 메소드를 이용해 접근할 테이블 이름을 지정하고,<br>
 where 메소드를 이용하여 검색할 컬럼 명과, 검색할 값을 지정합니다.<br>
 마지막으로 find_one 메소드를 이용하여 검색을 수행합니다.
@@ -72,7 +72,7 @@ $result = ORM::for_table("accounts")
   ->find_many();
 ```
 <br>
-__UPDATE 쿼리 사용하기__
+__UPDATE 쿼리 사용하기__<br>
 find 메소드를 사용해 검색한 결과값에 값을 수정하고,<br>
 save 메소드를 사용하여 다시 DB에 반영할 수 있습니다.
 ```PHP
@@ -84,7 +84,7 @@ $result->nickname = "hello";
 
 $result->save();
 ```
-___DELETE 쿼리 사용하기__
+__DELETE 쿼리 사용하기__<br>
 find 메소드를 사용해 검색한 결과값을 지우고 싶을 때는<br>
 delete 메소드를 사용합니다.
 ```PHP
@@ -94,7 +94,7 @@ $result = ORM::for_table("accounts")
 
 $result->delete();
 ```
-__INSERT 쿼리 사용하기__
+__INSERT 쿼리 사용하기__<br>
 테이블에 새 값을 넣을 때는 create 메소드를 이용합니다.<br>
 for_table 메소드로 값을 생성할 테이블을 지정한 뒤, create메소드를 호출합니다.
 ```PHP
